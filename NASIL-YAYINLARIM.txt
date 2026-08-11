@@ -1,0 +1,58 @@
+EMINÖNÜ FISCH — SİTEYİ YAYINLAMA (2 DAKİKA)
+============================================
+
+ADIM 1 — Bu klasörü yayınla
+---------------------------
+1. https://app.netlify.com/drop adresini aç
+2. Bu klasörü (içindeki dosyaları değil, KLASÖRÜ) sayfaya sürükle bırak
+3. Bitti. Netlify sana bir link verir, örn: https://xyz-123.netlify.app
+   Sitene hemen o linkten bakabilirsin.
+
+   NOT: Linki kalıcı tutmak ve domain bağlamak için ücretsiz
+   Netlify hesabı aç ("Claim your site" / "Sign up" düğmesi).
+
+
+ADIM 2 — Kendi domainini bağla (eminonufisch.com)
+--------------------------------------------------
+Netlify'da: Site settings > Domain management > Add custom domain
+> eminonufisch.com yaz > Netlify sana DNS kayıtlarını gösterir.
+
+Sonra Wix'te (domain orada duruyor):
+manage.wix.com > Domains > eminonufisch.com > Advanced > Edit DNS
+ve Netlify'ın verdiği kayıtları gir:
+  - A kaydı      @    ->  75.2.60.5
+  - CNAME kaydı  www  ->  (Netlify'ın verdiği xyz-123.netlify.app adresi)
+
+DİKKAT: Bu DNS değişikliğinden sonra eminonufisch.com ESKİ Wix
+sitesini değil YENİ siteyi gösterir. Eski site Wix hesabında
+silinmeden durur; istersen kayıtları geri alıp geri dönebilirsin.
+Değişikliğin yayılması 10 dakika - 2 saat sürebilir.
+
+HTTPS (kilit simgesi) Netlify tarafından otomatik ve ücretsiz gelir.
+
+
+SAYFALAR
+--------
+index.html         -> Ana sayfa
+speisekarte.html   -> Menü      (kısa adres: /speisekarte veya /menu)
+kontakt.html       -> İletişim  (kısa adres: /kontakt)
+
+QR KOD İÇİN: eminonufisch.com/speisekarte adresini kullan.
+
+
+GÜNCELLEME YAPMAK İSTERSEN
+---------------------------
+Dosyalarda değişiklik yapıp klasörü Netlify'a tekrar sürüklemen
+yeterli (Deploys > Drag and drop). Saniyeler içinde yayına girer.
+
+
+DOSYALAR HAKKINDA
+-----------------
+Her sayfa tek dosya; görseller içine gömülü, ekstra klasör yok.
+_redirects dosyası kısa adresleri sağlar, silme.
+İstanbul fotoğrafları restoranın Wix medya kütüphanesinden yüklenir
+(internet bağlantısı gerektirir).
+
+Diller: TR / DE / EN — sağ üstteki düğmelerden.
+Tema: açık / koyu — güneş-ay simgesinden.
+Seçimler tarayıcıda hatırlanır ve sayfalar arasında korunur.
